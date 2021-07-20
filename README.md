@@ -50,4 +50,4 @@
 ## Links
 
 - [Codesandbox.io Link](https://qbnvp.csb.app/)
-- []()
+- [Netlify Link](https://amazing-bassi-ad1b1b.netlify.app/)
