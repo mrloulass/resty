@@ -1,0 +1,7 @@
+@import '/src/design/variable.scss';
+
+section{
+  background-color: $backgroundColor2;
+  border:$borderOutset;
+  border-radius: $borderRadius;  
+}
