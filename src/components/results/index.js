@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './results.scss';
+
 class Results extends React.Component {
   render() {
     return (

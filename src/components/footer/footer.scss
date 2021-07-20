@@ -1,0 +1,10 @@
+@import '/src/design/variable.scss';
+
+footer {
+  background: darken($backgroundColor2, 25 );
+  border-top: 1px solid #eee;
+  padding: 1em 3em;
+  margin: 0;
+  border: $borderOutset;
+  border-radius: $borderRadius;  
+}
