@@ -7,6 +7,12 @@ form {
   margin: auto;
   width: 200px;
 
+  #get{
+    background-color: $backgroundColorGet;
+    &:hover, &.active {
+      background:$hoverActive;
+  }
+  }
   label {
     display: flex;
     margin: 1rem 0;
