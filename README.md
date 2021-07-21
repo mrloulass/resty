@@ -16,9 +16,9 @@
 - Rendering
 
 ### Phase 2: Testing and Deployment
-- Testing of React components and applications
+- Receiving user input in preparation of connecting to live APIs, using the useState() hook in our functional components
 
-- Integrates with an online CI framework
+- Testing of React components and applications
 
 - Deploy to GitHub Pages and Netlify
 
