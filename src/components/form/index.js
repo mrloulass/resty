@@ -22,7 +22,7 @@ function Form(props) {
           <button type="submit">GO!</button>
         </label>
         <label className="methods">
-          <span id="get">GET</span>
+          <span id="get" >GET</span>
           <span id="post">POST</span>
           <span id="put">PUT</span>
           <span id="delete">DELETE</span>
