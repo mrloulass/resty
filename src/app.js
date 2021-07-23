@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './app.scss';
 
 // Let's talk about using index.js and some other name in the component folder
@@ -9,40 +9,44 @@ import Footer from './components/footer/index.js';
 import Form from './components/form/index.js';
 import Results from './components/results/index.js';
 
-class App extends React.Component {
+function App(props) {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: null,
-      requestParams: {},
-    };
-  }
+  const [data, setData] = useState(null);
+  const [requestParams, setRequestParms] = useState({});
+  const [request, setRequest] = useState({});
+  const [response, setResponse] = useState({});
 
-  callApi = (requestParams) => {
+  const callApi = (requestParams) => {
     // mock output
     const data = {
       count: 2,
       results: [
-        {name: 'fake thing 1', url: 'http://fakethings.com/1'},
-        {name: 'fake thing 2', url: 'http://fakethings.com/2'},
+        { name: 'fake thing 1', url: 'http://fakethings.com/1' },
+        { name: 'fake thing 2', url: 'http://fakethings.com/2' },
       ],
     };
-    this.setState({data, requestParams});
+    setData(data);
+    setRequestParms(requestParams)
   }
 
-  render() {
-    return (
-      <React.Fragment>
-        <Header />
-        <div >Request Method: {this.state.requestParams.method}</div>
-        <div>URL: {this.state.requestParams.url}</div>
-        <Form handleApiCall={this.callApi} />
-        <Results data={this.state.data} />
-        <Footer />
-      </React.Fragment>
-    );
-  }
+  useEffect(() => {
+    if (Object.keys(request).length)axios(request).then(res => {
+      setResponse(res);
+    });
+  }, [request]);
+
+
+  return (
+    <React.Fragment>
+      <Header />
+      <div >Request Method: {requestParams.method}</div>
+      <div>URL: {requestParams.url}</div>
+      <Form handleApiCall={callApi} handleRequest={setRequest} />
+      <Results data={data} response={response} />
+      <Footer />
+    </React.Fragment>
+  );
+
 }
 
 export default App;

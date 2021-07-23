@@ -17,6 +17,14 @@ In the project directory, you can run:
 - Launches the test runner in the interactive watch mode.
 - See the section about running tests for more information.
 
+## Application Flow
+- User enters an API URL
+- Chooses a REST Method
+- Clicks the “Go” button
+- Application fetches data from the URL given, with the method specified
+- Displays the response headers and results separately
+- Both headers and results should be "pretty printed" JSON
+
 ## Development Process
 
 ### Phase 1: Application Setup
@@ -28,15 +36,15 @@ In the project directory, you can run:
 
 - Rendering
 
-### Phase 2: Testing and Deployment
+### Phase 2:  `useState()` hook
 - Receiving user input in preparation of connecting to live APIs, using the useState() hook in our functional components
 
 - Testing of React components and applications
 
 - Deploy to GitHub Pages and Netlify
 
-### Phase 3: State and Props
-- Create multiple components to handle each aspect of the Application
+### Phase 3: Component Lifecycle / `useEffect()` Hook
+- Connecting RESTy to live APIs, fetching and displaying remote data.
 
 - Sharing state and behaviors between components
 
