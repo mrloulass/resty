@@ -5,7 +5,7 @@ import './results.scss';
 function Results (props) {
     return (
       <section>
-        <pre data-testid="resultsData">{props.data ? JSON.stringify(props.data, undefined, 2) : null}</pre>
+        <pre data-testid="resultsData">{props.response ? JSON.stringify(props.response, undefined, 2) : props.data}</pre>
       </section>
     );
 }
